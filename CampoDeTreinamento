@@ -1,0 +1,58 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import org.openqa.selenium.Keys;
+
+
+import javax.swing.*;
+
+public class Teste1 {
+
+    private WebDriver driver;
+    private String url;
+
+    //Executado antes de cada método de teste
+    @BeforeMethod
+    public void before(){
+        String caminhoDriver = "C:\\Users\\polym\\Documents\\chromedriver.exe";
+        url = System.getProperty("user.dir")+"\\src\\paginas\\componentes.html";
+        System.setProperty("webdriver.chrome.driver", caminhoDriver);
+
+        driver = new ChromeDriver();
+    }
+    @Test
+    public void teste1() {
+        //Abrindo a página
+        driver.get(url);
+        //Inserir nome
+        WebElement nome = driver.findElement(By.id("elementosForm:nome"));
+        nome.sendKeys("Nanda/Eduardo");
+        //Inserir sobrenome
+        WebElement sobrenome = driver.findElement(By.id("elementosForm:sobrenome"));
+        sobrenome.sendKeys("Dantas/Rodrigues");
+        //Selecionar Sexo (vamos colocar feminino para testar)
+        WebElement sexo = driver.
+        //Selecionar Carne
+        //Selecionar Frango
+        //Selecionar Doutorado
+        //Selecionar Natação
+        //Informar Sugestões
+        //Marcar checkbox da Linha maria da tabela
+        //Marcar radio da linha Usuário A da tabela
+        //Preencher input da linha Usuário B da tabela
+        //Clicar em cadastrar
+        //Verificar se a mensagem "Cadastrado!" foi exibido
+        //Verificar de todos os textos exibidos de acordo com o que foi selecionado
+    }
+        @AfterMethod
+    public void after(){
+       //driver.quit();
+    }
+
+}
