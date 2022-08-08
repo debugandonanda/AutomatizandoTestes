@@ -39,20 +39,28 @@ public class Teste1 {
         //Selecionar Sexo (vamos colocar feminino para testar)
         WebElement sexo = driver.
         //Selecionar Carne
+        WebElement comida = driver.findElement(By.name(""))
         //Selecionar Frango
         //Selecionar Doutorado
         //Selecionar Natação
         //Informar Sugestões
         //Marcar checkbox da Linha maria da tabela
         //Marcar radio da linha Usuário A da tabela
+    
         //Preencher input da linha Usuário B da tabela
+        WebElement usuarioB = driver.findElment(By.)
         //Clicar em cadastrar
+        WebElement cadastrar = driver.findElement(By.id("elementosForm:cadastrar"));
+        cadastrar.click();
         //Verificar se a mensagem "Cadastrado!" foi exibido
-        //Verificar de todos os textos exibidos de acordo com o que foi selecionado
+         String resultado = driver.findElement(By.xpath("//*[@id="resultado"]/span")).getText();
+         Assert.assertEquals(resultado, "Cadastrado!");
+        //Verificar se todos os textos exibidos de acordo com o que foi selecionado
+
     }
         @AfterMethod
     public void after(){
-       //driver.quit();
+      // driver.quit();
     }
 
 }
