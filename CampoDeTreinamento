@@ -45,6 +45,7 @@ public class Teste1 {
         //Selecionar Natação
         //Informar Sugestões
         //Marcar checkbox da Linha maria da tabela
+        WebElement checkboxMaria = driver.findElement(By.xpath("//*[@id="elementosForm:tableUsuarios"]/tbody/tr[2]/td[4]/input")).click();
         //Marcar radio da linha Usuário A da tabela
     
         //Preencher input da linha Usuário B da tabela
@@ -56,6 +57,7 @@ public class Teste1 {
          String resultado = driver.findElement(By.xpath("//*[@id="resultado"]/span")).getText();
          Assert.assertEquals(resultado, "Cadastrado!");
         //Verificar se todos os textos exibidos de acordo com o que foi selecionado
+
 
     }
         @AfterMethod
