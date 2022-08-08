@@ -45,11 +45,15 @@ public class Teste1 {
         //Selecionar Natação
         //Informar Sugestões
         //Marcar checkbox da Linha maria da tabela
-        WebElement checkboxMaria = driver.findElement(By.xpath("//*[@id="elementosForm:tableUsuarios"]/tbody/tr[2]/td[4]/input")).click();
+        WebElement checkboxMaria = driver.findElement(By.xpath("//*[@id="elementosForm:tableUsuarios"]/tbody/tr[2]/td[4]/input"));
+        checkboxMaria.click();
         //Marcar radio da linha Usuário A da tabela
-    
+        WebElement radioA = driver.findElement(By.xpath("//*[@id="elementosForm:tableUsuarios"]/tbody/tr[3]/td[5]/table/tbody/tr/td/input"));
+        radioA.click();
         //Preencher input da linha Usuário B da tabela
-        WebElement usuarioB = driver.findElment(By.)
+        WebElement linhaB = driver.findElement(By.xpath"//*[@id="elementosForm:tableUsuarios"]/tbody/tr[5]/td[6]/input"));
+        linhaB.sendKeys("InputB");
+        
         //Clicar em cadastrar
         WebElement cadastrar = driver.findElement(By.id("elementosForm:cadastrar"));
         cadastrar.click();
